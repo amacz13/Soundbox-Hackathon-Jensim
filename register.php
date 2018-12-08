@@ -13,7 +13,7 @@
     </head>
 
 <body>
-<?php include("header.php");?>
+<?php include("header.php"); ?>
 
 <div class="row">
     <div class="col s3 m3"></div>
@@ -26,7 +26,7 @@
         <div class="card red">
             <div class="card-content white-text">
                 <span class="card-title">Erreur</span>
-                <p>Cet utilisateur n'existe pas !</p>
+                <p>Un utilisateur avec ce pseudo ou cette adresse mail existe déjà !</p>
             </div>
         </div>
         <?php
@@ -37,18 +37,18 @@
         <div class="card red">
             <div class="card-content white-text">
                 <span class="card-title">Erreur</span>
-                <p>Mot de passe incorrect !</p>
+                <p>Les mots de passe ne correspondent pas !</p>
             </div>
         </div>
         <?php
 
-        } else if (isset($_GET['info']) && $_GET['info'] == 1) {
+        } else if (isset($_GET['err']) && $_GET['err'] == 3) {
 
         ?>
-        <div class="card green">
+        <div class="card red">
             <div class="card-content white-text">
-                <span class="card-title">Information</span>
-                <p>Votre compte a été créé avec succès ! Vous pouvez désormais vous connecter.</p>
+                <span class="card-title">Erreur</span>
+                <p>Tous les champs sont nécessaires !</p>
             </div>
         </div>
         <?php
@@ -59,35 +59,44 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row ">
     <div class="col s6 offset-s3 center-top">
         <div class="card">
             <div class="card-content">
                 <div class="row valign-wrapper">
-                    <div class="col s4"><span class="card-title">Connexion à votre compte</span></div>
+                    <div class="col s4"><span class="card-title">Inscription</span></div>
                     <div class="col s8"><i class="material-icons large right">account_box</i></div>
                 </div>
             </div>
-            <form action="php/login.fn.php" method="post">
+            <form action="php/register.fn.php" method="post">
                 <div class="card-action">
                     <div class="row">
                         <div class="input-field col s12">
-                        <input id="login" type="text" class="validate" name="login">
-                        <label for="login">Pseudo</label>
+                            <input id="login" type="text" class="validate" name="login">
+                            <label for="login">Pseudo</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate" name="mail">
+                            <label for="email">Email</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="password" type="password" class="validate" name="password">
-                            <label for="password">Mot de passe</label>
+                            <label for="password">Mot de Passe</label>
                         </div>
                     </div>
-                    <div class="row valign-wrapper">
-                        <div class="col s6">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Valider</button>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cfpassword" type="password" class="validate" name="confirmation">
+                            <label for="cfpassword">Confirmation</label>
                         </div>
-                        <div class="col s6">
-                            <a href="register.php" class="right">Inscription</a>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Valider</button>
                         </div>
                     </div>
                 </div>
