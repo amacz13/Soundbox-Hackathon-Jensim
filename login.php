@@ -16,7 +16,6 @@
 <?php include("header.php");?>
 
 <div class="row">
-    <div class="col s3 m3"></div>
     <div class="col s6 m6">
         <?php 
 
@@ -60,7 +59,7 @@
 </div>
 
 <div class="row">
-    <div class="col s6 offset-s3 center-top">
+    <div class="col s6 m6">
         <div class="card">
             <div class="card-content">
                 <div class="row valign-wrapper">

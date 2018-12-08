@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow-x: hidden;">
     <head>
       <meta charset="utf-8">
       <!--Let browser know website is optimized for mobile-->
