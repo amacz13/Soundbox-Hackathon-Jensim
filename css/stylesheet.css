@@ -17,10 +17,11 @@ h4
 	text-align: center;
 	top:0;
 }
-.center-top {
 
 .soundboard .btn span
 {
+	margin-top: 25%;
+	text-align: center;
 	position: absolute;
 	top: 0;
 	left: 0;
