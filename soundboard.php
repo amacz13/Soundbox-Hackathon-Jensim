@@ -13,7 +13,25 @@
     </head>
 
     <body class="cyan lighten-5">
-      <?php include_once ("header.php"); ?>
+      <header>
+  
+        <nav class="cyan darken-2">
+          <div class="nav-wrapper">
+            <a href="soundboard.php" class="brand-logo center">SoundBox</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons left">settings</i></a>
+            <div class="tap-target" data-target="menu">
+            <div class="tap-target-content">
+              <p>Mode édition activé</p>
+            </div>
+          </div>
+              <li><a href="soundboard.php">SoundBoard</a></li>
+              <li><a href="login.php">Connexion</a></li>
+            </ul>
+          </div>
+        </nav>
+  
+      </header>
 
       <div class="container">
         <div class="row">
@@ -77,5 +95,11 @@
             <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script>
+        $(document).ready(function(){
+      $('.tap-target').tapTarget();
+    });
+  </script>
     </body>
   </html>
