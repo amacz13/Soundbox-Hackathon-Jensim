@@ -31,10 +31,10 @@
         </div>
 
         <?php
-
         session_start();
         if (isset($_SESSION['id'])) {
         ?>
+        
         <div class="row valign-wrapper">
           <div class="col s11 m11 l11">
             <div class="input-field">
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <?php include_once ("footer.php"); ?>
+      <?php include_once ("footerPlayer.php"); ?>
       
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>

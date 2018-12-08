@@ -6,6 +6,7 @@ var currentHtml = "";
 function btnClick(i) {
     audio = new Audio(sounds[i]);
     audio.play();
+    displayFooterAudio();
 }
 
 function stop(){
@@ -96,4 +97,18 @@ function addConfig() {
             else M.toast({html: 'Une erreur est survenue !'});
         }
     );
+}
+
+function loop(btn)
+{
+    var htmlCode;
+    htmlCode = 'loop';
+    $("btn").html(htmlCode);
+}
+
+displayFooterAudio()
+{
+    var htmlCode;
+    htmlCode = ' <div class="AudioRow valign-wrapper col l6 s12"> <a class="btn-floating btn-large waves-effect waves-light" id="loop" onclick="loop()"><i class="material-icons">loop</i></a><figure class="col l12 s12"> <figcaption>Nom btn</figcaption> <audio id="audio 1" controls src="#"> Your browser does not support the <code>audio</code> element.</audio> </figure></div> ';
+    $("DisplayPlayer").html(htmlCode);
 }
