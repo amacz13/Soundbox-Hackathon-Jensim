@@ -10,6 +10,8 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
 
+      <title>SoundBox</title>
+
     </head>
 
     <body class="cyan lighten-5">
