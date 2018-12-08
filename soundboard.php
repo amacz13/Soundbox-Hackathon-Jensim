@@ -13,26 +13,7 @@
     </head>
 
     <body class="cyan lighten-5">
-      <header>
-  
-        <nav class="cyan darken-2">
-          <div class="nav-wrapper">
-            <a href="soundboard.php" class="brand-logo center">SoundBox</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons left">settings</i></a>
-            <div class="tap-target" data-target="menu">
-            <div class="tap-target-content">
-              <p>Mode édition activé</p>
-            </div>
-          </div>
-              <li><a href="soundboard.php">SoundBoard</a></li>
-              <li><a href="compte.php">Compte</a></li>
-              <li><a href="login.php">Connexion/Inscription</a></li>
-            </ul>
-          </div>
-        </nav>
-  
-      </header>
+      <?php include_once ("header.php"); ?>
 
       <div class="container">
         <div class="row">
@@ -64,13 +45,12 @@
         <div class="card-panel col l10 offset-l1 s10 offset-s1">
           <div class="container-fluid soundboard">
           </div> 
+            <div class="fixed-action-btn">
+              <a class="btn-floating btn-large red waves-effect waves-light btn" onclick="stop()">CHUT!</a>
+            </div>
         </div>
-      </div>
 
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red waves-effect waves-light btn" onclick="stop()">CHUT!</a>
       </div>
-    
 
       <?php include_once ("footer.php"); ?>
       
