@@ -38,3 +38,9 @@ function loadconfig() {
         }
     );
 }
+
+function editMode()
+{
+    $("#infoEdit").show();
+    $("#addBtn").show();
+}
