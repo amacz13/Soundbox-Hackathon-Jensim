@@ -76,8 +76,8 @@
                 <div class="card-action">
                     <div class="row">
                         <div class="input-field col s12">
-                        <input id="login" type="text" class="validate" name="texte">
-                        <label for="login" id="texte">Nom du bouton</label>
+                        <input id="texte" type="text" class="validate" name="texte">
+                        <label for="texte" id="texte">Nom du bouton</label>
                         </div>
                     </div>
                     <div class="row">

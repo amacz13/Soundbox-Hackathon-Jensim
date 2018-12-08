@@ -6,7 +6,7 @@
         $color=htmlentities($_POST['color']);
         include('database.fn.php');
 
-        $sql = 'INSERT INTO buttons(urlSound,color,text) values ("'.$url'","'$color'","'$texte'") WHERE configId ='.$config.';';
+        $sql = 'INSERT INTO buttons(urlSound,color,text,configId) values ("'.$url.'","'.$color.'","'.$texte.'",'.$config.');';
         $result = mysqli_query($mysqli, $sql);
      
         if($result==1)
@@ -15,5 +15,7 @@
         }else{
             echo 'non okay';
         }
+    } else {
+        echo "Missing Args";
     }
 ?>

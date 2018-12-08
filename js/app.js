@@ -62,6 +62,7 @@ function ajouterBouton()
         },
         function (data)
         {
+            alert(data);
             htmlCode="";
             if(data.includes('okay'))
             {
