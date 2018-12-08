@@ -17,9 +17,9 @@ if (!$_SESSION['pseudo']) {
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
-
+      <link type="text/css" rel="stylesheet" href="css/dropzone.css"/>
+      <script src="js/dropzone.js"></script>
       <title>SoundBox</title>
-
     </head>
 
     <body class="cyan lighten-5">
@@ -70,7 +70,22 @@ if (!$_SESSION['pseudo']) {
               
             </div>
           </div>
-               
+          <div class="row">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Vos sons personnalisés</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Mettre en ligne un son</span>
+                <form action="/file-upload" class="dropzone" id="dropzone"></form>
+              </div>
+            </div>
+          </div>
+          
         </div>
         
       </div>

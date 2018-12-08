@@ -22,13 +22,10 @@
           <h4>Mon SoundBoard</h4>
         </div>
         <div id="infoEdit" style="display: none;" class="row">
-          <div class="col s3 m3"></div>
-          <div class="col s6 m6">
-            <div class="card blue">
-              <div class="card-content white-text">
-                  <span class="card-title">Info</span>
-                  <p>Vous êtes en mode édition !</p>
-              </div>
+          <div class="card blue">
+            <div class="card-content white-text">
+                <span class="card-title">Info</span>
+                <p>Vous êtes en mode édition !</p>
             </div>
           </div>
         </div>
@@ -56,7 +53,7 @@
             </div>
           </div>
           <div class="col s1 m1 l1">
-            <a id="menu" class="waves-effect waves-light btn btn-floating" onclick="addConfig()"><i class="material-icons left">add</i></a>
+            <a class="waves-effect waves-light btn btn-floating modal-trigger" href="#addConfModal"><i class="material-icons left">add</i></a>
           </div>
         </div>
         <?php
@@ -66,7 +63,7 @@
           <div class="container-fluid soundboard">
           </div> 
             <div class="fixed-action-btn">
-              <a class="btn-floating btn-large red waves-effect waves-light btn" onclick="stop()">CHUT!</a>
+              <a class="btn-floating btn-large red waves-effect waves-light btn" onclick="stop()"><i class="material-icons left">stop</i></a>
             </div>
         </div>
 
@@ -126,6 +123,20 @@
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="ajouterBouton()">Confirmer</a>
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</a>
+        </div>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="addConfModal" class="modal">
+        <div class="modal-content">
+          <h4>Nouvelle configuration</h4>
+          <div class="input-field c">
+            <input placeholder="Nom de la configuration" id="configName" type="text" class="validate">
+            <label for="configName">Nom de la configuration</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" onclick="addConfig()" class="modal-close waves-effect waves-green btn-flat">Ajouter</a>
         </div>
       </div>
 

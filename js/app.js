@@ -85,3 +85,17 @@ function ajouterBouton()
         }
     );
 }
+
+function addConfig() {
+    $.post(
+        '../php/addConfig.php',
+        {
+            name: $("#configName").val()
+        },
+        function (data)
+        {
+            if (data == "Ok") location.reload();
+            else M.toast({html: 'Une erreur est survenue !'});
+        }
+    );
+}
