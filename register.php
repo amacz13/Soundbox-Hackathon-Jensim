@@ -59,13 +59,14 @@
     </div>
 </div>
 
-<div class="row ">
-    <div class="col s6 offset-s3 center-top">
+<div class="container-fluid">
+  <div class="row">
+    <div class="card col l6 offset-l3 s10 offset-s1">
         <div class="card">
             <div class="card-content">
                 <div class="row valign-wrapper">
-                    <div class="col s4"><span class="card-title">Inscription</span></div>
-                    <div class="col s8"><i class="material-icons large right">account_box</i></div>
+                    <div class="col s8"><span class="card-title">Inscription</span></div>
+                    <div class="col s4"><i class="material-icons large right">account_box</i></div>
                 </div>
             </div>
             <form action="php/register.fn.php" method="post">
@@ -103,6 +104,7 @@
             </form>
         </div>
     </div>
+  </div>
 </div>
   
 
