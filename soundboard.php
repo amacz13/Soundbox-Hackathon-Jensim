@@ -21,6 +21,17 @@
         <div class="row">
           <h4>Mon SoundBoard</h4>
         </div>
+        <div id="infoEdit" style="display: none;" class="row">
+          <div class="col s3 m3"></div>
+          <div class="col s6 m6">
+            <div class="card blue">
+              <div class="card-content white-text">
+                  <span class="card-title">Info</span>
+                  <p>Vous êtes en mode édition !</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <?php
 

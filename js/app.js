@@ -41,6 +41,7 @@ function loadconfig() {
 
 function editMode()
 {
+    alert("TOTO");
     $("#infoEdit").show();
     $("#addBtn").show();
 }
