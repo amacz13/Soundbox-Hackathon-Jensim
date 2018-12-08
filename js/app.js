@@ -17,28 +17,23 @@ function pause(){
     
 M.AutoInit();
 
-$.post(
-    '../compte.php',
-    {
-        config : $("#select").id()
-    },
+function loadconfig() {
+    $.post(
+        '../php/recupBtn.php',
+        {
+            config: $("#selectConf").val()
+        },
+        function (data)
+        {
+            var json = JSON.parse(data);
+            var htmlCode = "";
+            sounds = new Array(json.length);
+            for (var i = 0; i < json.length; i ++) {
+                htmlCode += '<a class="waves-effect waves-light btn col l2 s4" onclick="btnClick('+i+')"><span>'+json[i].text+'</span></a>';
+                sounds[i] = json[i].urlSound;
+            }
 
-function (data)
-{
-    var bouttons = data;
-    for (var i = 0; i < ; i++) {
-        var myBouton = document.createElement('button');
-        var myH2 = document.createElement('h2');
-        var myPara1 = document.createElement('p');
-        var myPara2 = document.createElement('p');
-        var myPara3 = document.createElement('p');
-        var myList = document.createElement('ul');
-    
-       
+            $(".soundboard").html(htmlCode);
         }
-        var btn = document.createElement('button');
-    button.textContent = data['text'];
-    body.appendChild(premier);
-    }
-},
-);
+    );
+}

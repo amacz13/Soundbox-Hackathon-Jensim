@@ -39,45 +39,30 @@
           <h4>Mon SoundBoard</h4>
         </div>
 
+        <?php
+
+        session_start();
+        if (isset($_SESSION['id'])) {
+        ?>
         <div class="input-field col s12">
-          <select onchange="loadconfig()">
-            <option id="" value="1">Config default</option>
-            <option id="" value="2">Config 1</option>
-            <option id="" value="3">Config 2</option>
+          <select id="selectConf" onchange="loadconfig()">
+            <option value="0" disabled selected>Sélectionnez votre configuration</option>
+            <?php 
+            
+            include('php/database.fn.php');
+            $sql = "SELECT * FROM configs WHERE userID = ".$_SESSION['id'].";";
+            $result = mysqli_query($mysqli, $sql);
+            while ($data = mysqli_fetch_assoc($result)) {
+            ?>
+            <option value="<?php echo $data['configId'];?>"><?php echo $data['configName'];?></option>
+            <?php } ?>
           </select>
         </div>
-
+        <?php
+        }
+        ?>
         <div class="card-panel col l10 offset-l1 s10 offset-s1">
           <div class="container-fluid soundboard">
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(0)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(1)"><span>Son 1</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(2)"><span>Son 2</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(3)"><span>Son 3</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(4)"><span>Son 4</span></a>
-
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(5)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(6)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(7)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(8)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(9)"><span>Son 0</span></a>
-
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(10)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(11)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(12)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(13)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(14)"><span>Son 0</span></a>
-
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(15)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(16)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(17)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(18)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(19)"><span>Son 0</span></a>
-
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(20)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(21)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(22)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(23)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(24)"><span>Son 0</span></a>
           </div> 
         </div>
       </div>
@@ -89,14 +74,9 @@
 
       <?php include_once ("footer.php"); ?>
       
-            <!--JavaScript at end of body for optimized loading-->
+      <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/app.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script>
-        $(document).ready(function(){
-      $('.tap-target').tapTarget();
-    });
-  </script>
+      <script type="text/javascript" src="js/app.js"></script>
     </body>
   </html>

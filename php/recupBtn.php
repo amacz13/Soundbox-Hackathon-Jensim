@@ -1,21 +1,19 @@
 <?php
-    if (isset($_GET['config']) && !empty($_GET['config'])
-    {
+    if (isset($_POST['config']) && !empty($_POST['config'])) {
         $config = htmlentities($_POST['config']);
         include('database.fn.php');
 
-    $sql = 'SELECT * FROM buttons WHERE idConfig ="'.$config.'";';
-    $result = mysqli_query($mysqli, $sql);
-    $myArray = array();
-    if ($result) {
+        $sql = 'SELECT * FROM buttons WHERE configId ='.$config.';';
+        $result = mysqli_query($mysqli, $sql);
+        $myArray = array();
+        if ($result) {
 
-    while($row = $result->fetch_array(MYSQL_ASSOC)) {
-            $myArray[] = $row;
-    }
-    $contenu_json=json_encode($myArray);
-    }
-    
-    $result->close();
-    $mysqli->close();
+            while($row = mysqli_fetch_assoc($result)) {
+                $myArray[] = $row;
+            }
+
+            $contenu_json=json_encode($myArray);
+            echo $contenu_json;
+        }
     }
 ?>

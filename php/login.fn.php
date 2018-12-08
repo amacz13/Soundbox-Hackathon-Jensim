@@ -6,7 +6,7 @@ if (isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['password'
 
     include('database.fn.php');
 
-    $sql = 'SELECT password FROM users WHERE pseudo ="'.$pseudo.'";';
+    $sql = 'SELECT * FROM users WHERE pseudo ="'.$pseudo.'";';
     $result = mysqli_query($mysqli, $sql);
 
     if (mysqli_num_rows($result) == 0) {
