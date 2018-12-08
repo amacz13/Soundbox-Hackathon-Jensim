@@ -81,7 +81,7 @@ if (!$_SESSION['pseudo']) {
             <div class="card">
               <div class="card-content">
                 <span class="card-title">Mettre en ligne un son</span>
-                <form action="/file-upload" class="dropzone" id="dropzone"></form>
+                <form action="php/uploadFile.php" class="dropzone" id="dropzone"></form>
               </div>
             </div>
           </div>
