@@ -40,10 +40,10 @@
         </div>
 
         <div class="input-field col s12">
-          <select>
-            <option value="1">Config default</option>
-            <option value="2">Config 1</option>
-            <option value="3">Config 2</option>
+          <select onchange="loadconfig()">
+            <option id="" value="1">Config default</option>
+            <option id="" value="2">Config 1</option>
+            <option id="" value="3">Config 2</option>
           </select>
         </div>
 

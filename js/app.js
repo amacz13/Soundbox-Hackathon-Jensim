@@ -15,6 +15,30 @@ function pause(){
     audio.pause();
 }
     
-
-
 M.AutoInit();
+
+$.post(
+    '../compte.php',
+    {
+        config : $("#select").id()
+    },
+
+function (data)
+{
+    var bouttons = data;
+    for (var i = 0; i < ; i++) {
+        var myBouton = document.createElement('button');
+        var myH2 = document.createElement('h2');
+        var myPara1 = document.createElement('p');
+        var myPara2 = document.createElement('p');
+        var myPara3 = document.createElement('p');
+        var myList = document.createElement('ul');
+    
+       
+        }
+        var btn = document.createElement('button');
+    button.textContent = data['text'];
+    body.appendChild(premier);
+    }
+},
+);
