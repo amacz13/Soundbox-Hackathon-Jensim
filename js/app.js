@@ -1,5 +1,6 @@
-var sounds = ['http://cdn-preview-8.deezer.com/stream/c-85f7213d2d51e89fceddf14179c96b36-3.mp3',"http://cdn-preview-7.deezer.com/stream/c-76c344e16e1f2214e33bfae48b878128-4.mp3"];
+var sounds;
 var audio;
+var selectedConfig = 0;
 
 function btnClick(i) {
     audio = new Audio(sounds[i]);
@@ -33,7 +34,7 @@ function loadconfig() {
                 sounds[i] = json[i].urlSound;
             }
             htmlCode += '<a id="addBtn" class="waves-effect waves-light btn col l2 s4" style="display: none;" onclick="addBtn()"><span>+</span></a>';
-
+            selectedConfig = $("#selectConf").val();
             $(".soundboard").html(htmlCode);
         }
     );
@@ -41,7 +42,10 @@ function loadconfig() {
 
 function editMode()
 {
-    alert("TOTO");
-    $("#infoEdit").show();
-    $("#addBtn").show();
+    if (selectedConfig != 0) {
+        $("#infoEdit").show();
+        $("#addBtn").show();
+    } else {
+        M.toast({html: 'Sélectionnez une configuration dans un premier temps !'});
+    }
 }
