@@ -16,7 +16,6 @@
 <?php include("header.php");?>
 
 <div class="row">
-    <div class="col s3 m3"></div>
     <div class="col s6 m6">
         <?php 
 
