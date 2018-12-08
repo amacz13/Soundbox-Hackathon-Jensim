@@ -49,3 +49,39 @@ function editMode()
         M.toast({html: 'Sélectionnez une configuration dans un premier temps !'});
     }
 }
+
+function ajouterBouton()
+{
+    $.post(
+        '../php/ajoutBouton.php',
+        {
+            texte: $("#texte").val(),
+            url: $("#url").val(),
+            color: $("input[name='group1']:checked").val(),
+            config: $("#selectConf").val()
+        },
+        function (data)
+        {
+            htmlCode="";
+            if(data.includes('okay'))
+            {
+                var tempSounds = sounds;
+                sounds = new Array(tempSounds.length + 1);
+                
+                for (var i = 0; i < tempSounds.length; i ++) {
+                    sounds[i] = tempSounds[i];
+                }
+                sounds[tempSounds.length+1] = $("#url").val();
+                htmlCode += '<a class="waves-effect waves-light btn col l2 s4" onclick="btnClick('+(tempSounds.length+1)+')"><span>'+$("#texte").val()+'</span></a>';
+            }else{
+
+            }
+           
+            
+                
+            htmlCode += '<a id="addBtn" class="waves-effect waves-light btn col l2 s4 modal-trigger" href="#modal1" style="display: none;" onclick="addBtn()"><span>+</span></a>';
+
+            $(".soundboard").html(htmlCode);
+        }
+    );
+}

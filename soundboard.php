@@ -75,50 +75,45 @@
       <!-- Modal Structure -->
       <div id="modal1" class="modal">
         <div class="modal-content">
-        <form action="php/login.fn.php" method="post">
+        <form action="php/login.fn.php" method="post" id="ajouBtn">
                 <div class="card-action">
                     <div class="row">
                         <div class="input-field col s12">
                         <input id="login" type="text" class="validate" name="texte">
-                        <label for="login">Nom du bouton</label>
+                        <label for="login" id="texte">Nom du bouton</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="url" type="url" class="validate" name="url">
-                            <label for="url">Url du bouton</label>
+                            <label for="url" id="url">Url du bouton</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="url" type="url" class="validate" name="url">
-                            <label for="url">Url du bouton</label>
-                        </div>
-                    </div>
+                    
                     <form action="#" id="couleur">
                     <div class="row">
                       <div class="col 12">
                       <p>
                         <label>
-                          <input name="group1" type="radio" checked />
+                          <input name="group1" type="radio" value="red" checked />
                           <span>Red</span>
                         </label>
                       </p>
                       <p>
                         <label>
-                          <input name="group1" type="radio" />
+                          <input name="group1" type="radio" value="yellow" />
                           <span>Yellow</span>
                         </label>
                       </p>
                       <p>
                         <label>
-                          <input name="group1" type="radio"  />
+                          <input name="group1" type="radio" value="green" />
                           <span>Green</span>
                         </label>
                       </p>
                       <p>
                         <label>
-                          <input name="group1" type="radio"  />
+                          <input name="group1" type="radio" value="brown" />
                           <span>Brown</span>
                         </label>
                       </p>
@@ -129,7 +124,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Confirmer</a>
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="ajouterBouton()">Confirmer</a>
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</a>
         </div>
       </div>
