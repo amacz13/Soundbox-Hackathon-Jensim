@@ -11,7 +11,7 @@ if (isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['password'
 
     if (mysqli_num_rows($result) == 0) {
         //Pseudo is incorrect
-        header('Location : login.php?err=1');
+        header('Location : ../login.php?err=1');
     } else {
         //Pseudo is correct
         $data = mysqli_fetch_assoc($result);
@@ -21,10 +21,10 @@ if (isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['password'
             session_start();
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['id'] = $data['userId'];
-            header('Location : soundboard.php');
+            header('Location : ../soundboard.php');
         } else {
             //Password is incorrect
-            header('Location : login.php?err=2');
+            header('Location : ../login.php?err=2');
         }
     }
 }
