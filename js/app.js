@@ -106,7 +106,7 @@ function loop(btn)
     $("btn").html(htmlCode);
 }
 
-displayFooterAudio()
+function displayFooterAudio()
 {
     var htmlCode;
     htmlCode = ' <div class="AudioRow valign-wrapper col l6 s12"> <a class="btn-floating btn-large waves-effect waves-light" id="loop" onclick="loop()"><i class="material-icons">loop</i></a><figure class="col l12 s12"> <figcaption>Nom btn</figcaption> <audio id="audio 1" controls src="#"> Your browser does not support the <code>audio</code> element.</audio> </figure></div> ';
