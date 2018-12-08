@@ -5,6 +5,7 @@
         <h5 class="white-text">Projet SoundBoard</h5>
         <p class="grey-text text-lighten-4">Dans le cadre du Hackaton Jensim</p>
       </div>
+      
     </div>
   </div>
 </footer>

@@ -77,7 +77,11 @@
                     <div class="row">
                         <div class="input-field col s12">
                         <input id="texte" type="text" class="validate" name="texte">
+<<<<<<< Updated upstream
                         <label for="texte" id="texte">Nom du bouton</label>
+=======
+                        <label for="login" id="texte">Nom du bouton</label>
+>>>>>>> Stashed changes
                         </div>
                     </div>
                     <div class="row">

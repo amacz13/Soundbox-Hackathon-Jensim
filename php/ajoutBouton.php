@@ -8,7 +8,7 @@
 
         $sql = 'INSERT INTO buttons(urlSound,color,text,configId) values ("'.$url.'","'.$color.'","'.$texte.'",'.$config.');';
         $result = mysqli_query($mysqli, $sql);
-     
+        
         if($result==1)
         {
             echo 'okay';
