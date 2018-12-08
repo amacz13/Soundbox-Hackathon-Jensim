@@ -15,15 +15,32 @@
 <body>
 <?php include("header.php")?>
 
-<div class="row">
+<div class="row " margin-left="50px">
     <div class="col s12 m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title">SoundB</span>
-          
+          <i class="material-icons large">account_box</i>
         </div>
         <div class="card-action">
-          
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="login" type="text" class="validate">
+                <label for="login">Login</label>
+                </div>
+             </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col s3">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Se connecter
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
         </div>
       </div>
     </div>
