@@ -32,6 +32,7 @@ function loadconfig() {
                 htmlCode += '<a class="waves-effect waves-light btn col l2 s4" onclick="btnClick('+i+')"><span>'+json[i].text+'</span></a>';
                 sounds[i] = json[i].urlSound;
             }
+            htmlCode += '<a id="addBtn" class="waves-effect waves-light btn col l2 s4" style="display: none;" onclick="addBtn()"><span>+</span></a>';
 
             $(".soundboard").html(htmlCode);
         }
