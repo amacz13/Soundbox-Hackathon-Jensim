@@ -26,7 +26,8 @@
             </div>
           </div>
               <li><a href="soundboard.php">SoundBoard</a></li>
-              <li><a href="login.php">Connexion</a></li>
+              <li><a href="compte.php">Compte</a></li>
+              <li><a href="login.php">Connexion/Inscription</a></li>
             </ul>
           </div>
         </nav>
