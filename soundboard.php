@@ -64,13 +64,12 @@
         <div class="card-panel col l10 offset-l1 s10 offset-s1">
           <div class="container-fluid soundboard">
           </div> 
+            <div class="fixed-action-btn">
+              <a class="btn-floating btn-large red waves-effect waves-light btn" onclick="stop()">CHUT!</a>
+            </div>
         </div>
-      </div>
 
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red waves-effect waves-light btn" onclick="stop()">CHUT!</a>
       </div>
-    
 
       <?php include_once ("footer.php"); ?>
       
