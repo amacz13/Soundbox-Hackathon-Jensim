@@ -19,6 +19,15 @@
         <div class="row">
           <h4>Mon SoundBoard</h4>
         </div>
+
+        <div class="input-field col s12">
+          <select>
+            <option value="1">Config default</option>
+            <option value="2">Config 1</option>
+            <option value="3">Config 2</option>
+          </select>
+        </div>
+
         <div class="card-panel col l10 offset-l1 s10 offset-s1">
           <div class="row soundboard">
             <a class="waves-effect waves-light btn" onclick="btnClick(0)">Son 0</a>
