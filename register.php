@@ -63,7 +63,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="card col l6 offset-l3 s10 offset-s1">
+    <div class="col l6 offset-l3 s10 offset-s1">
         <div class="card">
             <div class="card-content">
                 <div class="row valign-wrapper">

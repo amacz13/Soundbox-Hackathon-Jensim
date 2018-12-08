@@ -19,13 +19,23 @@
         <?php include_once ("header.php"); ?>
 
       <div class="container">
+        <?php
+          session_start();
+          if ($_SESSION['pseudo']) {
+              $pseudo = htmlentities($_SESSION['pseudo']);
+
+              include('database.fn.php');
+
+              $sql = 'SELECT * FROM users WHERE pseudo ="'.$pseudo.'";';
+              $result = mysqli_query($mysqli, $sql);
+        ?>
 
         <h4 class="titrePage">Mon Compte</h4>
         <div class="card-panel" id="Compte">
 
           <div class="row">
-            <h6>Bonjour Pseudo</h6>
-            <p>address.mail@univ-lemans.fr</p>
+            <h6>Bonjour <?php echo'$resultat[1]'?></h6>
+            <p><?php echo'$resultat[2]'?></p>
           </div>
 
           <div class="card col l6 s12">
