@@ -49,7 +49,7 @@
 
         <div class="card-panel col l10 offset-l1 s10 offset-s1">
           <div class="row soundboard">
-            <a class="waves-effect waves-light btn" onclick="btnClick(0)">Son 0</a>
+            <a class="waves-effect waves-light btn" onclick="btnClick(0)"><span>Son 0</span></a>
             <a class="waves-effect waves-light btn" onclick="btnClick(1)">Son 1</a>
             <a class="waves-effect waves-light btn" onclick="btnClick(2)">Son 2</a>
             <a class="waves-effect waves-light btn" onclick="btnClick(3)">Son 3</a>
