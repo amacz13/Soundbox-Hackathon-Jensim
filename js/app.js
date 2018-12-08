@@ -7,5 +7,13 @@ function btnClick(i) {
 }
 
 function stop(){
+<<<<<<< Updated upstream
+    audio.pause();
+    audio.currentTime = 0;
+}
+=======
     audio.stop();
 }
+
+M.AutoInit();
+>>>>>>> Stashed changes
