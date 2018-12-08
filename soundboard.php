@@ -38,19 +38,26 @@
         session_start();
         if (isset($_SESSION['id'])) {
         ?>
-        <div class="input-field col s12">
-          <select id="selectConf" onchange="loadconfig()">
-            <option value="0" disabled selected>Sélectionnez votre configuration</option>
-            <?php 
-            
-            include('php/database.fn.php');
-            $sql = "SELECT * FROM configs WHERE userID = ".$_SESSION['id'].";";
-            $result = mysqli_query($mysqli, $sql);
-            while ($data = mysqli_fetch_assoc($result)) {
-            ?>
-            <option value="<?php echo $data['configId'];?>"><?php echo $data['configName'];?></option>
-            <?php } ?>
-          </select>
+        <div class="row valign-wrapper">
+          <div class="col s11 m11 l11">
+            <div class="input-field">
+              <select id="selectConf" onchange="loadconfig()">
+                <option value="0" disabled selected>Sélectionnez votre configuration</option>
+                <?php 
+                
+                include('php/database.fn.php');
+                $sql = "SELECT * FROM configs WHERE userID = ".$_SESSION['id'].";";
+                $result = mysqli_query($mysqli, $sql);
+                while ($data = mysqli_fetch_assoc($result)) {
+                ?>
+                <option value="<?php echo $data['configId'];?>"><?php echo $data['configName'];?></option>
+                <?php } ?>
+              </select>
+            </div>
+          </div>
+          <div class="col s1 m1 l1">
+            <a id="menu" class="waves-effect waves-light btn btn-floating" onclick="addConfig()"><i class="material-icons left">add</i></a>
+          </div>
         </div>
         <?php
         }
