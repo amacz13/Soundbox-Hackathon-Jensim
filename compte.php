@@ -49,13 +49,13 @@
                 <span>Modifier Mot de passe : </span>
 
                 <div class="input-field col s12">
-                  <input id="mdp" type="password" class="validate">
+                  <input id="mdpactu" name="mdpactu" type="password" class="validate">
                   <label for="mdp">Mot de passe actuel</p></label>
                 </div>
 
                 <div class="input-field col s12">
-                  <input id="mdp" type="password" class="validate">
-                  <label for="mdp">Nouveau mot de passe</label>
+                  <input id="mdpnew" type="password" class="validate">
+                  <label for="mdpnew">Nouveau mot de passe</label>
                 </div>
 
                 <div class="col offset-s5">

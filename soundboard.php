@@ -48,40 +48,36 @@
         </div>
 
         <div class="card-panel col l10 offset-l1 s10 offset-s1">
-          <div class="row soundboard">
-            <a class="waves-effect waves-light btn" onclick="btnClick(0)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(1)"><span>Son 1</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(2)"><span>Son 2</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(3)"><span>Son 3</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(4)"><span>Son 4</span></a>
-          </div>
-          <div class="row soundboard">
-            <a class="waves-effect waves-light btn" onclick="btnClick(5)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(6)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(7)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(8)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(9)"><span>Son 0</span></a>
-          </div>  
-          <div class="row soundboard">
-            <a class="waves-effect waves-light btn" onclick="btnClick(10)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(11)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(12)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(13)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(14)"><span>Son 0</span></a>
-          </div>  
-          <div class="row soundboard">
-            <a class="waves-effect waves-light btn" onclick="btnClick(15)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(16)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(17)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(18)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(19)"><span>Son 0</span></a>
-          </div> 
-          <div class="row soundboard">
-            <a class="waves-effect waves-light btn" onclick="btnClick(20)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(21)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(22)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(23)"><span>Son 0</span></a>
-            <a class="waves-effect waves-light btn" onclick="btnClick(24)"><span>Son 0</span></a>
+          <div class="container-fluid soundboard">
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(0)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(1)"><span>Son 1</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(2)"><span>Son 2</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(3)"><span>Son 3</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(4)"><span>Son 4</span></a>
+
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(5)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(6)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(7)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(8)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(9)"><span>Son 0</span></a>
+
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(10)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(11)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(12)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(13)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(14)"><span>Son 0</span></a>
+
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(15)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(16)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(17)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(18)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(19)"><span>Son 0</span></a>
+
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(20)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(21)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(22)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(23)"><span>Son 0</span></a>
+            <a class="waves-effect waves-light btn col l2 s4" onclick="btnClick(24)"><span>Son 0</span></a>
           </div> 
         </div>
       </div>

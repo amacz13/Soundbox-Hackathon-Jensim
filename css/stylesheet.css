@@ -7,6 +7,7 @@ h4
 {
 	display: flex;
 	justify-content: space-around;	
+	flex-wrap: wrap;
 }
 
 .soundboard .btn
