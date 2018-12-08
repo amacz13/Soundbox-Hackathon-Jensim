@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+if (!$_SESSION['pseudo']) {
+  header('Location: login.php');
+  exit(0);
+}
+?>
 <!DOCTYPE html>
   <html>
     <head>
@@ -20,22 +28,21 @@
 
       <div class="container">
         <?php
-          session_start();
-          if ($_SESSION['pseudo']) {
-              $pseudo = htmlentities($_SESSION['pseudo']);
+              $pseudo = $_SESSION['pseudo'];
 
-              include('database.fn.php');
+              include('php/database.fn.php');
 
               $sql = 'SELECT * FROM users WHERE pseudo ="'.$pseudo.'";';
               $result = mysqli_query($mysqli, $sql);
+              $data = mysqli_fetch_assoc($result);
         ?>
 
         <h4 class="titrePage">Mon Compte</h4>
         <div class="card-panel" id="Compte">
-
+          
           <div class="row">
-            <h6>Bonjour <?php echo'$resultat[1]'?></h6>
-            <p><?php echo'$resultat[2]'?></p>
+            <h6>Bonjour <?php echo $data['pseudo'];?></h6>
+            <p><?php echo $data['email'];?></p>
           </div>
 
           <div class="card col l6 s12">
