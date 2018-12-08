@@ -20,13 +20,19 @@
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title">SoundB</span>
-          <i class="material-icons large">account_box</i>
+          <h3 class="text-center">Inscription</h3>
         </div>
         <div class="card-action">
             <div class="row">
                 <div class="input-field col s12">
                 <input id="login" type="text" class="validate">
-                <label for="login">Login</label>
+                <label for="login">Pseudo</label>
+                </div>
+             </div>
+             <div class="row">
+                <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
                 </div>
              </div>
         <div class="row">
@@ -36,11 +42,17 @@
             </div>
         </div>
         <div class="row">
+            <div class="input-field col s12">
+                <input id="cfpassword" type="password" class="validate">
+                <label for="password">Confirmation</label>
+            </div>
+        </div>
+        <div class="row">
         <div class="col s4">
             <button class="btn waves-effect waves-light" type="submit" name="action">Send
                 <i class="material-icons right">send</i>
             </button>
-            <a href="#" ><p class="text-center"> sign in </p></a>
+            
         </div>
         </div>
       </div>
