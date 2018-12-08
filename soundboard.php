@@ -89,14 +89,42 @@
                             <label for="url">Url du bouton</label>
                         </div>
                     </div>
-                    <div class="row valign-wrapper">
-                        <div class="col s6">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Valider</button>
-                        </div>
-                        <div class="col s6">
-                            <a href="register.php" class="right">Inscription</a>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="url" type="url" class="validate" name="url">
+                            <label for="url">Url du bouton</label>
                         </div>
                     </div>
+                    <form action="#" id="couleur">
+                    <div class="row">
+                      <div class="col 12">
+                      <p>
+                        <label>
+                          <input name="group1" type="radio" checked />
+                          <span>Red</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" type="radio" />
+                          <span>Yellow</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" type="radio"  />
+                          <span>Green</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" type="radio"  />
+                          <span>Brown</span>
+                        </label>
+                      </p>
+                  </div>
+                </div>
+               </form>
                 </div>
             </form>
         </div>
