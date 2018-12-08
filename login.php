@@ -15,8 +15,8 @@
 <body>
 <?php include("header.php")?>
 
-<div class="row center-div">
-    <div class="col s5">
+<div class="row ">
+    <div class="col s6 offset-s3 center-top">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title">SoundB</span>
@@ -40,6 +40,7 @@
             <button class="btn waves-effect waves-light" type="submit" name="action">Send
                 <i class="material-icons right">send</i>
             </button>
+            <a href="#" ><p class="text-center"> sign in </p></a>
         </div>
         </div>
       </div>

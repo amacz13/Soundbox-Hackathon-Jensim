@@ -16,7 +16,7 @@
 <?php include("header.php")?>
 
 <div class="row ">
-    <div class="col s6 offset-s3 center-div">
+    <div class="col s6 offset-s3 center-top">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title">SoundB</span>
