@@ -7,5 +7,6 @@ function btnClick(i) {
 }
 
 function stop(){
-    audio.stop();
+    audio.pause();
+    audio.currentTime = 0;
 }
