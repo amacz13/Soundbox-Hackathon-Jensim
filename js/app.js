@@ -1,10 +1,12 @@
 var sounds;
 var audio;
 var selectedConfig = 0;
+var currentHtml = "";
 
 function btnClick(i) {
     audio = new Audio(sounds[i]);
     audio.play();
+    displayFooterAudio(sounds[i]);
 }
 
 function stop(){
@@ -33,15 +35,15 @@ function loadconfig() {
                 htmlCode += '<a class="waves-effect waves-light btn col l2 s4" onclick="btnClick('+i+')"><span>'+json[i].text+'</span></a>';
                 sounds[i] = json[i].urlSound;
             }
-            htmlCode += '<a id="addBtn" class="waves-effect waves-light btn col l2 s4 modal-trigger" href="#modal1" style="display: none;" onclick="addBtn()"><span>+</span></a>';
+            currentHtml = htmlCode;
+            htmlCode += '<a id="addBtn" class="btn-floating waves-effect waves-light btn col l2 s4 modal-trigger" href="#modal1" style="display: none;" onclick="addBtn()"><span>+</span></a>';
             selectedConfig = $("#selectConf").val();
             $(".soundboard").html(htmlCode);
         }
     );
 }
 
-function editMode()
-{
+function editMode() {
     if (selectedConfig != 0) {
         $("#infoEdit").show();
         $("#addBtn").show();
@@ -50,8 +52,7 @@ function editMode()
     }
 }
 
-function ajouterBouton()
-{
+function ajouterBouton() {
     $.post(
         '../php/ajoutBouton.php',
         {
@@ -62,25 +63,22 @@ function ajouterBouton()
         },
         function (data)
         {
+            var htmlCode = "";
             alert(data);
-            htmlCode="";
-            if(data.includes('okay'))
-            {
+            htmlCode = currentHtml;
+            if (data.includes('okay')) {
                 var tempSounds = sounds;
                 sounds = new Array(tempSounds.length + 1);
-                
                 for (var i = 0; i < tempSounds.length; i ++) {
                     sounds[i] = tempSounds[i];
                 }
                 sounds[tempSounds.length+1] = $("#url").val();
                 htmlCode += '<a class="waves-effect waves-light btn col l2 s4" onclick="btnClick('+(tempSounds.length+1)+')"><span>'+$("#texte").val()+'</span></a>';
-            }else{
-
+            } else {
+                M.toast({html: 'Une erreur est survenue !'});
             }
-           
-            
-                
-            htmlCode += '<a id="addBtn" class="waves-effect waves-light btn col l2 s4 modal-trigger" href="#modal1" style="display: none;" onclick="addBtn()"><span>+</span></a>';
+            currentHtml = htmlCode;
+            htmlCode += '<a id="addBtn" class="btn-floating waves-effect waves-light btn col l2 s4 modal-trigger" href="#modal1" onclick="addBtn()"><span>+</span></a>';
 
             $(".soundboard").html(htmlCode);
         }
@@ -99,4 +97,18 @@ function addConfig() {
             else M.toast({html: 'Une erreur est survenue !'});
         }
     );
+}
+
+function loop(btn)
+{
+    var htmlCode;
+    htmlCode = 'loop';
+    $("btn").html(htmlCode);
+}
+
+function displayFooterAudio(sound)
+{
+    var htmlCode;
+    htmlCode = ' <div class="AudioRow valign-wrapper col l6 s12"> <a class="btn-floating btn-large waves-effect waves-light" id="loop" onclick="loop()"><i class="material-icons">loop</i></a><figure class="col l12 s12"> <figcaption>Nom btn</figcaption> <audio id="audio 1" controls src="'+sound+'"> Your browser does not support the <code>audio</code> element.</audio> </figure></div> ';
+    $("DisplayPlayer").html(htmlCode);
 }
